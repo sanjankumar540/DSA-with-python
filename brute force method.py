@@ -34,7 +34,7 @@ for i in range(0,len(a)-1+1):
     for j in range(i+1,len(a)-1+1):
         if a[i]+a[j]==sum:
             print(a[i],",",a[j])
-    print()    """
+    print()    
 
 
 a = [10,20,30,40,50]
@@ -44,4 +44,13 @@ for i in range (0,len(a)):
         for k in range (j+1,len(a)-1+1):
             if a[i]+a[j]+a[k] == result:
                 print(a[i],",",a[j],",",a[k])
-    print()
+    print()   """
+
+
+# brute force method to generate all the subarray
+a = [10,20,30,40,50,60]
+for i in range(0,len(a)-1+1):
+    for j in range(i,len(a)-1+1):
+        for k in range(j,len(a)-1+1):
+            print(a[k],end=" ")
+        print()
