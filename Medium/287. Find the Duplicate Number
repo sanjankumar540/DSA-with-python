@@ -6,3 +6,15 @@ class Solution:
                 return i
             else:
                 h[i] = 0
+
+
+# or we can use set , because no need of keys and value both in this program (we need only keys on the aspects of dict)
+
+class Solution:
+    def findDuplicate(self, nums: list[int]) -> int:
+        s = set()
+        for i in nums:
+            if i in s:
+                return i 
+            else:
+                s.add  (i)
