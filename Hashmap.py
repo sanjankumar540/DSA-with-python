@@ -25,7 +25,7 @@ for i in h.keys():
 h = {1: 'sanjan', 2: 'kumar', 3: 'sowbhagya', 4: 'sarangi',5:"chethan"}
 for i in h.keys():
     print(h[i]) # to fetch all the values 
-"""
+
 
 #frequency hashmap
 a = [10,10,20,50,70,10,30,40,60,50,10,30,40,70,80,80,30]
@@ -37,4 +37,37 @@ for i in a:
         h[i] = count
     else:
         h[i] = 1
-print(h)    #{10: 4, 20: 1, 50: 2, 70: 2, 30: 3, 40: 2, 60: 1, 80: 2}
+print(h)    #{10: 4, 20: 1, 50: 2, 70: 2, 30: 3, 40: 2, 60: 1, 80: 2}   
+
+
+
+# second variation of hashmap (prefix sum)
+a=[10,20,30,40,50,60,70]
+h={}
+h[0]=0
+sum = 0
+i=1
+for x in a:
+    sum = sum + x
+    h[i] = sum
+    i+=1
+print(h)
+print(h[4])  """
+
+
+#print yes if there is a subarray  where sum == k
+a = [10,20,-10,80,-10,20,60,1]
+h={}
+h[0]=0
+sum = 0
+i = 1
+k = 70
+for x in a:
+    sum = sum+x
+    if (sum - k ) in h.values():
+        #print(sum)
+        #print(sum-k)
+        print("yes")
+    else:
+        h[i]=sum
+        i+=1
