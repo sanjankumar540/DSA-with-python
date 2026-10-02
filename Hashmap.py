@@ -27,7 +27,7 @@ for i in h.keys():
     print(h[i]) # to fetch all the values 
 """
 
-# frequency hashmap
+#frequency hashmap
 a = [10,10,20,50,70,10,30,40,60,50,10,30,40,70,80,80,30]
 h={}
 for i in a:
@@ -37,4 +37,4 @@ for i in a:
         h[i] = count
     else:
         h[i] = 1
-print(h)
+print(h)    #{10: 4, 20: 1, 50: 2, 70: 2, 30: 3, 40: 2, 60: 1, 80: 2}
