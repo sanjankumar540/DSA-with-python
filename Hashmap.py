@@ -89,7 +89,7 @@ print(h)   """
 
 
 # kadane's algorithm
-
+# to print maximum sum of the subarray
 a=[10,20,30,-5,10,15,10,8]
 psum = 0
 submax = 0
@@ -97,7 +97,16 @@ print(a)
 for i in a:
     psum = max(psum+i ,psum)
     submax = max(submax , psum)
-    print(psum ,end=" ")
+    #print(psum ,end=" ")
 print(submax)
-    
 
+# to print minimum sum of the subarray
+a=[10,20,30,-5,10,15,10,8]
+psum = 0
+submin = 0
+print(a)
+for i in a:
+    psum = min(psum+i , psum)
+    submin = min(psum ,submin)
+    #print(psum , end=" ")
+print(submin)
