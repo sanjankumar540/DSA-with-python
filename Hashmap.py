@@ -52,7 +52,7 @@ for x in a:
     h[i] = sum
     i+=1
 print(h)
-print(h[4])  """
+print(h[4])  
 
 
 #print yes if there is a subarray  where sum == k
@@ -70,4 +70,34 @@ for x in a:
         print("yes")
     else:
         h[i]=sum
-        i+=1
+        i+=1    
+
+
+# frequency hashmap for string
+a= "sanjan kumar sk"
+h = {}
+for i in a:
+    if i in h.keys():
+        count = h[i]
+        count = count+1
+        h[i] = count
+    else:
+        h[i] = 1
+
+print(h)   """
+
+
+
+# kadane's algorithm
+
+a=[10,20,30,-5,10,15,10,8]
+psum = 0
+submax = 0
+print(a)
+for i in a:
+    psum = max(psum+i ,psum)
+    submax = max(submax , psum)
+    print(psum ,end=" ")
+print(submax)
+    
+
