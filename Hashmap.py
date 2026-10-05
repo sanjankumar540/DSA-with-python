@@ -84,7 +84,7 @@ for i in a:
     else:
         h[i] = 1
 
-print(h)   """
+print(h)   
 
 
 
@@ -92,21 +92,43 @@ print(h)   """
 # to print maximum sum of the subarray
 a=[10,20,30,-5,10,15,10,8]
 psum = 0
-submax = 0
+sub_max = a[0] 
 print(a)
 for i in a:
-    psum = max(psum+i ,psum)
-    submax = max(submax , psum)
+    psum = max(psum+i ,i)
+    sub_max = max(sub_max ,psum)
     #print(psum ,end=" ")
-print(submax)
+print(sub_max)
 
 # to print minimum sum of the subarray
 a=[10,20,30,-5,10,15,10,8]
 psum = 0
-submin = 0
+submin = a[0]
 print(a)
 for i in a:
     psum = min(psum+i , psum)
     submin = min(psum ,submin)
     #print(psum , end=" ")
-print(submin)
+print(submin)   """
+
+
+
+#hashmap to print the longest subarray having same starting point and ending point
+a=[10,1,2,3,4,10,1,2,3,4,10,1,2,3,4]
+print(a)
+h = {}
+i = 0
+for x in a:
+    if x in h.keys():
+        start = h[x]
+        end = i
+        for j in range(start, end+1):
+            print(a[j],end=" ")
+        print()
+
+
+    else:
+        h[x]=i
+    i=i+1
+print(h)
+
