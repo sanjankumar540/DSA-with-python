@@ -1,0 +1,14 @@
+class Solution:
+    def majorityElement(self, nums: list[int]) -> int:
+    h = {}
+    n=len(nums)
+    for i in nums:
+        if i in h.keys():
+            count = h[i]
+            count = count+1
+            h[i] = count
+        else:
+            h[i] = 1
+    for i in h:
+        if h[i] > n/2:
+            return i 

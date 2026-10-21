@@ -109,26 +109,57 @@ for i in a:
     psum = min(psum+i , psum)
     submin = min(psum ,submin)
     #print(psum , end=" ")
-print(submin)    """
+print(submin)    
+
+
+
+
 
 
  
-#hashmap to print the  subarray having same starting point and ending point
-a=[10,1,2,3,4,10,1,2,3,4,10,1,2,3,4]
+#hashmap to print the  subarrays having same starting point and ending point
+a=[10,1,2,3,4,10,1,2,3,4,10,1,2,3,9,4]
 print(a)
 h = {}
-i = 1
+i=0
 for x in a:
     if x in h.keys():
         start = h[x]
         end = i
-        start -=1
-        end-=1
-        for j in range(start, end+1):
-            print(a[j],end=" ")
+
+        for j in range(start , end+1):
+            print(a[j],end = " ")
         print()
     else:
-        h[x]=i
-    i=i+1
-print(h)
+        h[x] = i
+    i+=1
+print(h)   """
 
+
+
+
+#print the longest subarray having the same starting and ending value
+a = [10,2,3,1,1,2,-5,10,11,-2,1,2,3,4,1,5]
+print(a)
+h = {}
+i=0
+maxlen = 0
+mark1 = 0
+mark2 = 0
+for x in a:
+    if (x in h.keys()):
+        if i-h[x] > maxlen:
+            maxlen = i-h[x]
+            mark1 = h[x]
+            mark2 = i
+    else:
+        h[x] = i
+    i+=1
+
+for i in range(mark1,mark2+1):
+    print(a[i] ,end=" ")
+
+print("\nlength of longest subarray:", mark2 - mark1 + 1)
+print(h)
+if h.values() > 3:
+    print(h[x])
